@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  rdw:
+    container_name: 'rdw'
+    build: ./jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./jupyter:/app
+      - ./data:/data
+    entrypoint:
+      jupyter lab --ip="0.0.0.0" --port="8888" --allow-root --no-browser --NotebookApp.token="" --NotebookApp.password=""  --debug  
+volumes:
+  db_data:
+  db_config:
