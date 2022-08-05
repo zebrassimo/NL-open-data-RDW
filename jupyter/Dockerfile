@@ -12,6 +12,7 @@ RUN apt-get install nodejs -y
 RUN apt-get install npm -y
 RUN pip install jupyterlab
 RUN pip install pandas
-#RUN pip install json
+RUN pip install sklearn
+RUN pip install matplotlib
 RUN pip install requests
 
